@@ -48,7 +48,6 @@
             }
         }
 
-
         @media screen and (max-width: 992px) {
             &__list {
                 width: calc(100% / 4 - 1.875rem);
