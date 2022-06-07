@@ -22,6 +22,9 @@ export default {
         color: var(--secondary-color-text);
         padding: .625rem;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &__img {
             width: 100%;

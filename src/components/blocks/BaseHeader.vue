@@ -20,7 +20,7 @@ export default {
 <style lang="scss" scoped>
     header {
         background-color: var(--secondary-color);
-        height: 3.75rem;
+        height: var(--header-md);
 
         .container {
             margin: 0;
