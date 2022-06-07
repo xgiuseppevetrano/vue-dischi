@@ -1,15 +1,23 @@
 <template>
-  <main>
-      
-  </main>
+    <main>
+        <AlbumSection/>
+    </main>
 </template>
 
 <script>
-export default {
+import AlbumSection from '../sections/AlbumSection.vue'
 
+export default {
+    name: 'BaseMain',
+    components: { 
+        AlbumSection
+    }
 }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+    main {
+        background-color: var(--primary-color);
+        min-height: calc(100vh - 3.75rem);
+    }
 </style>

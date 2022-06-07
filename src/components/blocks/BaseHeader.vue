@@ -1,7 +1,9 @@
 <template>
-  <header>
-      <LogoSection class="p-2"/>
-  </header>
+    <header>
+        <div class="container">
+            <LogoSection/>
+        </div>
+    </header>
 </template>
 
 <script>
@@ -18,5 +20,10 @@ export default {
 <style lang="scss" scoped>
     header {
         background-color: var(--secondary-color);
+        height: 3.75rem;
+
+        .container {
+            margin: 0;
+        }
     }
 </style>
