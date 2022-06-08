@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <div class="albums">
-                <AlbumCard class="albums__list" v-for="(album, index) in albums" :key="index" :album="album"/>
+                <AlbumCard class="albums__list" v-for="(album, index) in FilteredAlbum" :key="index" :album="album"/>
             </div>
         </div>
     </section>
@@ -11,6 +11,7 @@
 <script>
     import axios from 'axios';
     import AlbumCard from '../commons/AlbumCard';
+    import select from "../../shared/select";
 
     export default {
         name: 'AlbumSection',
@@ -20,6 +21,7 @@
         data() {
             return {
                 albums: [],
+                select
             };
         },
         created() {
@@ -27,6 +29,11 @@
             .then((response) => {
                 this.albums = response.data.response;
             })
+        },
+        computed: {
+            FilteredAlbum() {
+                return this.albums.filter(album => album.genre === this.select.selected || this.select.selected==="All");
+            }
         }
     }
 </script>
