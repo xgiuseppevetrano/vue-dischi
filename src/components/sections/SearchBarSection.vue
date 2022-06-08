@@ -1,13 +1,6 @@
 <template>
-    <div class="select">
-        <label class="select__label" for="typo">Scegli il tuo genere : </label>
-        <select class="select__option" name="typo" id="typo" v-model="select.selected">
-            <option value="all">All</option>
-            <option value="rock">Rock</option>
-            <option value="pop">Pop</option>
-            <option value="jazz">Jazz</option>
-            <option value="metal">Metal</option>
-        </select>
+    <div class="search-bar">
+        <input class="search-bar__input" type="text" placeholder="Search artist" v-model="select.text">
     </div>
 </template>
 
@@ -15,6 +8,7 @@
 import select from "../../shared/select";
 
 export default {
+    name: 'SearchBarSection',
     data() {
         return {
             select,
@@ -24,17 +18,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.select {
-    
-    &__label {
-        color: var(--primary-color-text);
-        text-transform: uppercase;
-        font-size: .9375rem;
-    }
-
-    &__option {
+    .search-bar__input {
         padding: .3125rem;
         border-radius: .625rem;
+        border: .0625rem solid var(--secondary-color);
+        text-align: center;
     }
-}
 </style>

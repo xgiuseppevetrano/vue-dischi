@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <div class="albums">
-                <AlbumCard class="albums__list" v-for="(album, index) in FilteredAlbum" :key="index" :album="album"/>
+                <AlbumCard class="albums__list" v-for="(album, index) in FilteredGenreAlbum" :key="index" :album="album"/>
             </div>
         </div>
     </section>
@@ -31,9 +31,12 @@
             })
         },
         computed: {
-            FilteredAlbum() {
-                return this.albums.filter(album => album.genre.toLowerCase() === this.select.selected || this.select.selected === "all");
-            }
+            FilteredGenreAlbum() {
+                if (this.select.text === '') {
+                    return this.albums.filter(album => album.genre.toLowerCase() === this.select.selected || this.select.selected === "all"); 
+                }
+                return this.albums.filter(album => album.author.toLowerCase().includes(this.select.text.toLowerCase()));
+            },
         }
     }
 </script>
@@ -48,31 +51,31 @@
             width: calc(100% / 5 - 1.875rem);
             margin: .9375rem;
 
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 75rem) {
                 & {
                     width: calc(100% / 5 - 1.875rem);
                 }
             }
 
-            @media screen and (max-width: 992px) {
+            @media screen and (max-width: 62rem) {
                 & {
                     width: calc(100% / 4 - 1.875rem);
                 }
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 48rem) {
                 & {
                     width: calc(100% / 3 - 1.875rem);
                 }
             }
 
-            @media screen and (max-width: 576px) {
+            @media screen and (max-width: 36rem) {
                 & {
                     width: calc(100% / 2 - 1.875rem);
                 }
             }
 
-            @media screen and (max-width: 400px) {
+            @media screen and (max-width: 25rem) {
                 & {
                     width: calc(100% - 1.875rem);
                 }

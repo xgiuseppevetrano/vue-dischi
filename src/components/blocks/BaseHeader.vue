@@ -3,6 +3,7 @@
         <div class="container">
             <div class="header">
                 <LogoSection/>
+                <SelectSection/>
                 <SearchBarSection/>
             </div>
         </div>
@@ -12,11 +13,13 @@
 <script>
 import LogoSection from "../sections/LogoSection.vue";
 import SearchBarSection from '../sections/SearchBarSection.vue';
+import SelectSection from '../sections/SelectSection.vue';
 
 export default {
     name: 'BaseHeader',
     components: {
         LogoSection,
+        SelectSection,
         SearchBarSection
     }
 }
