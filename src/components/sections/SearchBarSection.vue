@@ -2,11 +2,11 @@
     <div class="select">
         <label class="select__label" for="typo">Scegli il tuo genere : </label>
         <select class="select__option" name="typo" id="typo" v-model="select.selected">
-            <option value="All">All</option>
-            <option value="Rock">Rock</option>
-            <option value="Pop">Pop</option>
-            <option value="Jazz">Jazz</option>
-            <option value="Metal">Metal</option>
+            <option value="all">All</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="metal">Metal</option>
         </select>
     </div>
 </template>

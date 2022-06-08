@@ -32,7 +32,7 @@
         },
         computed: {
             FilteredAlbum() {
-                return this.albums.filter(album => album.genre === this.select.selected || this.select.selected==="All");
+                return this.albums.filter(album => album.genre.toLowerCase() === this.select.selected || this.select.selected === "all");
             }
         }
     }
