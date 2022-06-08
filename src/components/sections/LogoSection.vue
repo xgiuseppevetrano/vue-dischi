@@ -1,7 +1,7 @@
 <template>
-  <div class="logo">
-      <img class="logo__img img-fluid" src="../../assets/img/spotify-logo.png" alt="spotify logo">
-  </div>
+    <div class="logo">
+        <img class="logo__img img-fluid" src="../../assets/img/spotify-logo.png" alt="spotify logo">
+    </div>
 </template>
 
 <script>

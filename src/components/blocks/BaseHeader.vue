@@ -1,18 +1,23 @@
 <template>
     <header>
         <div class="container">
-            <LogoSection/>
+            <div class="header">
+                <LogoSection/>
+                <SearchBarSection/>
+            </div>
         </div>
     </header>
 </template>
 
 <script>
 import LogoSection from "../sections/LogoSection.vue";
+import SearchBarSection from '../sections/SearchBarSection.vue';
 
 export default {
     name: 'BaseHeader',
     components: {
-        LogoSection
+        LogoSection,
+        SearchBarSection
     }
 }
 </script>
@@ -22,8 +27,10 @@ export default {
         background-color: var(--secondary-color);
         height: var(--header-md);
 
-        .container {
-            margin: 0;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 </style>
